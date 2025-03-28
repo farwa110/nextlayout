@@ -1,0 +1,237 @@
+@import "tailwindcss";
+
+:root {
+  --background: #c8dce5;
+  --foreground: #fff;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif, Helvetica, sans-serif;
+}
+/* Header Section styles */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  margin: 20px 0;
+}
+
+nav ul {
+  display: flex;
+  gap: 3.5rem;
+  list-style: none;
+  padding: 2rem;
+  margin: auto;
+}
+
+nav ul li {
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.apple-logo {
+  width: 50px;
+  height: 50px;
+  margin-left: 20px;
+}
+
+.icon-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-right: 20px;
+}
+
+.divider {
+  width: 1px;
+  height: 20px;
+  background-color: white;
+  opacity: 0.5;
+}
+
+.search-icon,
+.shopping-icon {
+  font-size: 30px;
+}
+
+nav ul li:nth-child(4) {
+  position: relative; /*pseduo element position */
+  border-radius: 8px;
+}
+
+nav ul li:nth-child(4)::before {
+  content: ""; /* Creates the pseudo-element */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  z-index: -1;
+  transition: transform 0.3s ease-in-out;
+  transform: scale(0);
+  border-radius: 8px;
+}
+
+nav ul li:nth-child(4):hover::before {
+  transform: scale(1);
+}
+
+nav ul li:nth-child(4):hover {
+  color: #c8dce5;
+  cursor: pointer;
+}
+
+/*  SectionHero styles */
+.buy-button {
+  /* background-color: #c8dce5; */
+  color: white;
+  border: 2px solid white;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  width: 20%;
+  height: 50px;
+  margin-top: 100px;
+  cursor: pointer;
+}
+
+.buy-button:hover {
+  background-color: whitesmoke;
+}
+.section-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 50px;
+  margin: 100px 100px;
+}
+
+.hero-heading {
+  font-size: 3rem;
+  font-weight: bold;
+}
+.hero-heading .changing-text {
+  font-weight: normal;
+}
+.hero-heading .future-text {
+  font-weight: normal;
+}
+/* HeroWatch Section styles */
+.hero-watch {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 50px;
+  /* margin-top: -620px;
+  margin-right: 230px; */
+}
+
+.watch-section {
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-start; */
+  padding: 50px;
+  margin-top: -620px;
+  margin-right: 230px;
+}
+.watch-img {
+  width: 500px;
+  height: auto;
+}
+
+.color-indicators {
+  display: flex;
+  gap: 20px;
+  margin-right: 100px;
+  margin-top: -350px;
+}
+
+.active {
+  width: 150px;
+  height: 150px;
+}
+/* SectionGalleri styles */
+.gallery {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+}
+
+.gallery-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  margin-left: 120px;
+}
+
+.gallery-nav svg {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.galleri-images {
+  display: flex;
+  /* justify-content: flex-end; */
+  gap: 50px;
+  margin-right: 10px;
+  margin-top: 50px;
+}
+
+.galleri-img {
+  width: 150px;
+  height: auto;
+  margin-top: -4rem;
+  object-fit: cover;
+}
+.greywatch-wrapper {
+  display: inline-flex;
+  justify-content: center;
+  background-color: #43455899;
+  padding: 10px;
+  border-radius: 15px;
+  width: 250px;
+  height: 150px;
+}
+.greenwatch-wrapper {
+  display: inline-flex;
+  justify-content: center;
+  background-color: #6addcc99;
+  padding: 10px;
+  border-radius: 15px;
+  width: 250px;
+  height: 150px;
+}
+.pinkwatch-wrapper {
+  display: inline-flex;
+  justify-self: center;
+  background-color: #f9cdc499;
+  padding: 10px;
+  border-radius: 15px;
+  width: 250px;
+  height: 150px;
+}
