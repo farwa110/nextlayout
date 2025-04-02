@@ -13,7 +13,7 @@ export default function Navbar() {
           <li className="text-xl font-medium cursor-pointer">Ipad</li>
           <li className="text-xl font-medium cursor-pointer relative group">
             Iwatch
-            <span className="absolute top-0 left-0 right-0 bottom-0 bg-white z-[-1] rounded-lg transition-transform duration-300 transform scale-0 group-hover:scale-100"></span>
+            <span className="absolute top-0 left-0 right-0 bottom-0 bg-white z-[-1] rounded-lg transition-transform duration-300 transform scale-0 group-hover:scale-100 "></span>
           </li>
           <li className="text-xl font-medium cursor-pointer">Support</li>
         </ul>

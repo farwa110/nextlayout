@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
-import HeroImage from "./HeroImage";
-import Gallery from "./Gallery";
+import HeroWatch from "./HeroWatch";
+import SectionGalleri from "./SectionGalleri";
 
 export default function WatchShowcase() {
   const [activeImage, setActiveImage] = useState("/mint.png");
@@ -9,8 +9,8 @@ export default function WatchShowcase() {
 
   return (
     <div>
-      <HeroImage activeImage={activeImage} setActiveImage={setActiveImage} activeColor={activeColor} setActiveColor={setActiveColor} />
-      <Gallery setActiveImage={setActiveImage} setActiveColor={setActiveColor} />
+      <HeroWatch activeImage={activeImage} setActiveImage={setActiveImage} activeColor={activeColor} setActiveColor={setActiveColor} />
+      <SectionGalleri setActiveImage={setActiveImage} setActiveColor={setActiveColor} />
     </div>
   );
 }
