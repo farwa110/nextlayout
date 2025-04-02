@@ -1,16 +1,13 @@
-// import Image from "next/image";
 import Header from "@/app/components/Header";
 import SectionHero from "./components/SectionHero";
-import HeroWatch from "./components/HeroWatch";
-import SectionGalleri from "./components/SectionGalleri";
+import WatchShowcase from "./components/WatchShowcase"; //  parent component
 
 export default function Home() {
   return (
     <div>
       <Header />
       <SectionHero />
-      <HeroWatch />
-      <SectionGalleri />
+      <WatchShowcase />
     </div>
   );
 }
