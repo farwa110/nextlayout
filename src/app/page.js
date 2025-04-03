@@ -1,13 +1,10 @@
+import React from "react";
 import Header from "@/app/components/Header";
-import SectionHero from "./components/SectionHero";
-import WatchShowcase from "./components/WatchShowcase"; //  parent component
 
-export default function Home() {
+export default function Page() {
   return (
     <div>
       <Header />
-      <SectionHero />
-      <WatchShowcase />
     </div>
   );
 }

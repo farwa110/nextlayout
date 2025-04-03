@@ -3,14 +3,15 @@ import { useState } from "react";
 import HeroWatch from "./HeroWatch";
 import SectionGalleri from "./SectionGalleri";
 
+import Mint from "@/app/assets/img/mint.png";
+
 export default function WatchShowcase() {
-  const [activeImage, setActiveImage] = useState("/mint.png");
-  const [activeColor, setActiveColor] = useState("mint");
+  const [activeImage, setActiveImage] = useState(Mint);
 
   return (
     <div>
-      <HeroWatch activeImage={activeImage} setActiveImage={setActiveImage} activeColor={activeColor} setActiveColor={setActiveColor} />
-      <SectionGalleri setActiveImage={setActiveImage} setActiveColor={setActiveColor} />
+      <HeroWatch activeImage={activeImage} setActiveImage={setActiveImage} />
+      <SectionGalleri activeImage={activeImage} setActiveImage={setActiveImage} />
     </div>
   );
 }
