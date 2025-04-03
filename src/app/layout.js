@@ -1,5 +1,6 @@
 import { Poppins } from "next/font/google";
 import "./globals.css";
+import Header from "@/app/components/Header";
 
 const poppins = Poppins({
   weight: ["400", "700"],
@@ -15,6 +16,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body suppressHydrationWarning className={poppins.className}>
+        <Header />
         {children}
       </body>
     </html>
